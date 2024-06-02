@@ -30,36 +30,37 @@ Normalization: Converting text to lowercase.
 Tokenization: Splitting text into individual words.
 Lemmatization: Reducing words to their base form.
 Standardization: Transforming data into a standard format.
-Modeling
-Model Initialization
+
+## Modeling
+## Model Initialization
 The model is initialized using TensorFlow and Keras. The architecture includes:
 
 An embedding layer for word embeddings.
 LSTM layers for capturing sequential dependencies.
 Dense layers for classification.
-Model Training
+## Model Training
 The model is trained on the preprocessed data using TensorFlow and Keras. The training process involves:
 
 Splitting the data into training and validation sets.
 Compiling the model with appropriate loss function and optimizer.
 Fitting the model on the training data with validation.
-Model Evaluation
+## Model Evaluation
 The model's performance is evaluated using accuracy and R-squared metrics. The trained model achieves:
 
 Classification Accuracy: 75%
 R-squared: 0.80
-Model Optimization
+## Model Optimization
 The optimization process includes iterative changes to the model architecture, hyperparameters, and training process. The results of each iteration are documented in a CSV file. Key steps in the optimization process:
 
 Adjusting the number of LSTM layers and units.
 Tuning the dropout rate.
 Experimenting with different optimizers and learning rates.
-Model Deployment
+## Model Deployment
 The trained model is deployed using Flask. The deployment includes:
 
 A RESTful API that accepts review text and returns sentiment predictions.
 Integration with a front-end interface for user interaction.
-Installation
+## Installation
 To install the project dependencies, run:
 
 bash
