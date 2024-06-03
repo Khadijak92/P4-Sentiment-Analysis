@@ -9,6 +9,7 @@
 - Model Evaluation
 - Model Optimization
 - Model Deployment
+- Analysis/Future Recommendations
 - Installation
 - Usage
 - Contributing
@@ -60,6 +61,13 @@ The trained model is deployed using Flask. The deployment includes:
 
 A RESTful API that accepts review text and returns sentiment predictions.
 Integration with a front-end interface for user interaction.
+
+## Analysis/Future Recommendations
+Our model aimed to evaluate different Amazon reviews of a certain product in order to learn how well the general public perceives this product (in this case, it was different Amazon products, specifically different versions of the Kindle and different versions of the Amazon Alexa). We initially cleaned up the model by removing unnecessary rows, and translating the text into numbers to turn the written reviews into something that could be analyzed my our model in a predictive manner.
+
+From there, we padded our sequence for training and testing, which we did after normalizing the  features. After this, we initialized our model with two hidden layers, then compiled and trained our model before finally evaluating the model and plotting the accuracy results.
+
+Unfortunately, we found that our model was very inaccurate with am accuracy rating of just 0.06, which was below our target 0.75. We took this as a sign that our model was not able to accurately predict the tone of the reviews and instead did almost the opposite. Therefore, after a lot of thought about what could be some steps we would take next time to more accurately predict the review sentiment, we would most likely use a non-categorical variable such as number of stars given for the model to predict, and try to limit the model to just predict one type of product. By doing this, the model would not get confused and compare reviews from two uncomparable products, and it would also ensure that we have a variable we can more easily predict with our model.
 ## Installation
 To install the project dependencies, run:
 
